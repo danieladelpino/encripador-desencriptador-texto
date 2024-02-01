@@ -22,7 +22,7 @@ const resultadoFinal = (nuevoValor) => {
 
     muneco.style.display = "none";
     tituloMensaje.style.display = "none";
-    encriptado.classList.add("encriptado-ajustar"); 
+    encriptado.classList.add("encriptado-ajustar");
     mensajeAjustado.classList.add("encriptado-ajustar");
     mensajeFinal.style.display = "block";
     mensajeInicial.style.display = "none";
@@ -32,52 +32,78 @@ const resultadoFinal = (nuevoValor) => {
 botonEncriptar.addEventListener("click", () => {
     const texto = ingresoTexto.value.toLowerCase();
 
-    const encriptar = (nuevoTexto) => {
-        for (let i = 0; i < reemplazo.length; i++) {
-            if (nuevoTexto.includes(reemplazo[i][0])){
-                nuevoTexto = nuevoTexto.replaceAll(reemplazo[i][0],reemplazo[i][1])
-            }
-        }
-        return nuevoTexto;
+    if (texto.trim() === "") {
+        Swal.fire({
+            icon: "warning",
+            title: "¡Advertencia!",
+            text: "Por favor, ingresa un texto antes de encriptar.",
+            confirmButtonColor: "#3085d6",
+            confirmButtonText: "OK",
+        });
+    } else {
 
+        const encriptar = (nuevoTexto) => {
+            for (let i = 0; i < reemplazo.length; i++) {
+                if (nuevoTexto.includes(reemplazo[i][0])) {
+                    nuevoTexto = nuevoTexto.replaceAll(reemplazo[i][0], reemplazo[i][1])
+                }
+            }
+            return nuevoTexto;
+
+        }
+        resultadoFinal(encriptar(texto));
     }
 
-    resultadoFinal(encriptar(texto));
-    
+
 
 })
 
 botonDesencriptar.addEventListener("click", () => {
     const texto = ingresoTexto.value.toLowerCase();
 
-    const desencriptar = (nuevoTexto) => {
-        for (let i = 0; i < reemplazo.length; i++) {
-            if (nuevoTexto.includes(reemplazo[i][1])){
-                nuevoTexto = nuevoTexto.replaceAll(reemplazo[i][1],reemplazo[i][0])
-            }
-        }
-        return nuevoTexto;
+    if (texto.trim() === "") {
 
+        Swal.fire({
+            icon: "warning",
+            title: "¡Advertencia!",
+            text: "Por favor, ingresa un texto antes de desencriptar.",
+            confirmButtonColor: "#3085d6",
+            confirmButtonText: "OK",
+        });
+
+    } else {
+
+        const desencriptar = (nuevoTexto) => {
+            for (let i = 0; i < reemplazo.length; i++) {
+                if (nuevoTexto.includes(reemplazo[i][1])) {
+                    nuevoTexto = nuevoTexto.replaceAll(reemplazo[i][1], reemplazo[i][0])
+                }
+            }
+            return nuevoTexto;
+
+        }
+
+        resultadoFinal(desencriptar(texto));
     }
 
-    resultadoFinal(desencriptar(texto));
-    
+
+
 
 })
 
 botonCopiar.addEventListener("click", () => {
 
-     mensajeFinal.select();
-     document.execCommand("copy");
-     window.getSelection().removeAllRanges();
+    mensajeFinal.select();
+    document.execCommand("copy");
+    window.getSelection().removeAllRanges();
 
-     Swal.fire({
+    Swal.fire({
         position: "center",
         icon: "success",
-        title:"Texto copiado al portapapeles",
+        title: "Texto copiado al portapapeles",
         showConfirmButton: false,
         timer: 1500
-      });
-  
-     
+    });
+
+
 });

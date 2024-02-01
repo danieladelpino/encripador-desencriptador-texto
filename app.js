@@ -30,9 +30,18 @@ const resultadoFinal = (nuevoValor) => {
 }
 
 botonEncriptar.addEventListener("click", () => {
-    const texto = ingresoTexto.value.toLowerCase();
+    const texto = ingresoTexto.value;
 
-    if (texto.trim() === "") {
+    if (texto !== texto.toLowerCase()) {
+        Swal.fire({
+            icon: "warning",
+            title: "¡Advertencia!",
+            text: "Por favor, ingresa solo texto en minúsculas.",
+            confirmButtonColor: "#3085d6",
+            confirmButtonText: "OK",
+        });
+
+    } else if (texto.trim() === "") {
         Swal.fire({
             icon: "warning",
             title: "¡Advertencia!",
@@ -40,7 +49,9 @@ botonEncriptar.addEventListener("click", () => {
             confirmButtonColor: "#3085d6",
             confirmButtonText: "OK",
         });
-    } else {
+    }
+
+    else {
 
         const encriptar = (nuevoTexto) => {
             for (let i = 0; i < reemplazo.length; i++) {
@@ -59,9 +70,19 @@ botonEncriptar.addEventListener("click", () => {
 })
 
 botonDesencriptar.addEventListener("click", () => {
-    const texto = ingresoTexto.value.toLowerCase();
+    const texto = ingresoTexto.value;
 
-    if (texto.trim() === "") {
+    if (texto !== texto.toLowerCase()) {
+        Swal.fire({
+            icon: "warning",
+            title: "¡Advertencia!",
+            text: "Por favor, ingresa solo texto en minúsculas.",
+            confirmButtonColor: "#3085d6",
+            confirmButtonText: "OK",
+        });
+
+    }
+    else if (texto.trim() === "") {
 
         Swal.fire({
             icon: "warning",

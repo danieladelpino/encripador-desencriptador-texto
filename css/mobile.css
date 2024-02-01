@@ -94,6 +94,8 @@
     border-radius: 32px;
     padding: 20px;
     width: 90%;
+    display: block;
+    height: auto;
 }
 
 .encriptado img {

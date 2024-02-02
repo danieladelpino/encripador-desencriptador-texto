@@ -97,7 +97,7 @@
     width: 90%;
     display: block;
     height: auto;
-    min-height: 10vh;
+    min-height: 20vh;
 }
 
 .encriptado img {
@@ -139,7 +139,7 @@
     font-size: 24px;
     color: #495057;
     display: none;
-    height: 20vh;
+    height: 10vh;
 
 }
 

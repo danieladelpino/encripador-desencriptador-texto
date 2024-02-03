@@ -10,7 +10,6 @@
     margin-top: 80px;
     height: 700px;
     border: none;
-    font-family: "Inter";
     font-style: normal;
     font-weight: 400;
     font-size: 32px;
@@ -37,7 +36,6 @@
 }
 
 .terminos p {
-    font-family: "Inter";
     font-style: normal;
     font-weight: 400;
     font-size: 12px;
@@ -65,7 +63,6 @@
     padding: 20px;
     background-color: #0A3871;
     border-radius: 24px;
-    font-family: "Inter";
     font-size: 16px;
     line-height: 19px;
     text-align: center;
@@ -79,7 +76,6 @@
     background-color: #d8dfe8;
     border: 1px solid #0a3871;
     border-radius: 24px;
-    font-family: "Inter";
     font-weight: 400;
     font-size: 16px;
     line-height: 19px;
@@ -107,7 +103,6 @@
 }
 
 .mensaje-encriptado h2 {
-    font-family: "Inter";
     font-style: normal;
     font-weight: 800;
     font-size: 24px;
@@ -117,7 +112,6 @@
 }
 
 .mensaje-encriptado p {
-    font-family: "Inter";
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
@@ -136,7 +130,6 @@
     outline: none;
     border: none;
     resize: none;
-    font-family: "Inter";
     font-style: normal;
     font-weight: 400;
     font-size: 24px;
@@ -152,7 +145,6 @@
     background-color: #ffffff;
     border: 1px solid #0a3871;
     border-radius: 24px;
-    font-family: "Inter";
     font-weight: 400;
     font-size: 16px;
     text-align: center;

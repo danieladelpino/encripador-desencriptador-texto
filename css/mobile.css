@@ -96,8 +96,9 @@
     padding: 20px;
     width: 90%;
     display: block;
-    height: auto;
-    min-height: 20vh;
+    overflow: hidden;
+    min-height: 25vh;
+    max-height: 80vh;
 }
 
 .encriptado img {
